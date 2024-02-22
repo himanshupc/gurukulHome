@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GurukulGPT - About Us</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400&display=swap");
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        *::selection {
+            color: #000;
+            background-color: #fff;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            font-weight: 300;
+            color: #fff;
+
+        }
+
+
+
+        .container {
+            max-width: 120rem;
+            margin: 0 auto;
+            padding: 0 6rem 6rem 6rem;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8rem 0 6rem 0;
+        }
+
+        .content__text {
+            width: 100% !important;
+        }
+
+        .content__text-box {
+            width: 100% !important;
+            margin-right: 0rem !important;
+        }
+
+        @media only screen and (max-width: 580px) {
+            .nav {
+                padding-bottom: 2rem;
+            }
+        }
+
+        .nav__list {
+            display: flex;
+            gap: 16rem;
+            list-style: none;
+        }
+
+        @media only screen and (max-width: 920px) {
+            .nav__list {
+                gap: 6rem;
+            }
+        }
+
+        @media only screen and (max-width: 580px) {
+            .nav__list {
+                gap: 4rem;
+            }
+        }
+
+        .nav__link {
+            text-decoration: none;
+            color: #fafafa;
+            font-weight: 500;
+            font-size: 1.8rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav__link:hover {
+            color: #949494;
+            border-bottom: 1px solid #fff;
+        }
+
+        .nav__link--active {
+            color: #FFC800;
+            border-bottom: 1px solid #fff;
+        }
+
+        .nav__link--active:hover {
+            color: #616161;
+
+        }
+
+        @media only screen and (max-width: 580px) {
+            .nav__copy {
+                display: none;
+            }
+
+            .container {
+                /* border: 2px solid; */
+                max-width: 135rem;
+                margin: 0 auto;
+                padding: 2rem;
+            }
+        }
+
+        .page-title {
+            margin-bottom: 8rem;
+            text-align: center;
+            font-family: "Anton", sans-serif;
+            font-size: 16rem;
+            font-weight: 100;
+            text-transform: uppercase;
+            letter-spacing: -0.4px;
+            line-height: 16rem;
+            color: #fafafa;
+        }
+
+        @media only screen and (max-width: 760px) {
+            .page-title {
+                margin-bottom: 6rem;
+                font-size: 8rem;
+            }
+        }
+
+        @media only screen and (max-width: 580px) {
+            .page-title {
+                margin-bottom: 4rem;
+                font-size: 7rem;
+            }
+        }
+
+        @media only screen and (max-width: 370px) {
+            .page-title {
+                margin-bottom: 0;
+                font-size: 5rem;
+            }
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        @media only screen and (max-width: 760px) {
+            .content {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: stretch;
+            }
+        }
+
+        .content__descriptor {
+            width: 14%;
+            border-top: 1px solid #7b7b7b;
+            padding-top: 4rem;
+        }
+
+        @media only screen and (max-width: 760px) {
+            .content__descriptor {
+                width: 100%;
+                padding: 2rem 0;
+                border-top: none;
+            }
+        }
+
+        .content__title {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        .content__text-box {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 50%;
+            border-top: 1px solid #7b7b7b;
+            border-bottom: 1px solid #7b7b7b;
+            margin-right: 10rem;
+            padding: 4rem 2%;
+            background: #80808061;
+        }
+
+        @media only screen and (max-width: 920px) {
+            .content__text-box {
+                margin-right: 0;
+            }
+        }
+
+        @media only screen and (max-width: 760px) {
+            .content__text-box {
+                width: 100%;
+                padding: 2rem 0;
+            }
+        }
+
+        @media only screen and (max-width: 580px) {
+            .content__text-box {
+                border-bottom: none;
+            }
+        }
+
+        .content__text {
+            width: 400px;
+        }
+
+        @media only screen and (max-width: 580px) {
+            .content__text-box {
+                background: none;
+            }
+
+            .content__text {
+                width: 100%;
+            }
+        }
+
+        .gptAWSimg {
+            background-image: url("http://gurukulgpt.s3-website.ap-south-1.amazonaws.com/ai_art.png");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .backgroundGPT {
+            min-height: 100vh;
+            background-color: #0000008a !important;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="gptAWSimg">
+        <div class="backgroundGPT">
+            <div class="container">
+                <header>
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li>
+                                <a class="nav__link" href="index.html">HOME</a>
+                            </li>
+                            <li>
+                                <a class="nav__link nav__link--active" href="About_us.html">ABOUT US</a>
+                            </li>
+                            <li>
+                                <a class="nav__link" href="contactus.html">CONTACT US</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <h1 class="page-title">ABOUT US</h1>
+                </header>
+                <main>
+                    <article class="content">
+                        <!-- <section class="content__descriptor">
+                            <h2 class="content__title">About GurukulGPT:</h2>
+                        </section> -->
+                        <section class="content__text-box">
+                            <center>
+                                <p class="content__text">
+                                    <!-- <b>About GurukulGPT: </b> <br> -->
+                                    At GurukulGPT, we are dedicated to revolutionizing education for Indian students
+                                    through
+                                    innovative technology solutions.
+                                </p>
+                            </center>
+                            <p class="content__text">
+                                <b>Virtual Tutor Service:</b> <br>
+                                We offer a WhatsApp-based virtual tutor service designed for primary-class students
+                                across
+                                India. Our platform provides personalized learning experiences, catering to the diverse
+                                needs of
+                                young learners.
+                            </p>
+                            <p class="content__text">
+                                <b>Proprietary Generative AI Technology::</b> <br>
+                                Powered by proprietary Generative AI technology from Project Alphabet, we have developed
+                                India's first truly indigenous regional language Large Language Models (LLM). These
+                                models
+                                are tailored to support learning in regional languages, ensuring inclusivity and
+                                accessibility for all students.
+                            </p>
+                        </section>
+                    </article>
+                </main>
+            </div>
+        </div>
+
+    </div>
+    <article style="background-color: #000;">
+        <section class="page-section" id="about">
+            <div class="container2">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">About GurukulGPT</h2>
+                    <h3 class="section-subheading">At GurukulGPT, we are dedicated to revolutionizing
+                        education for Indian students through innovative technology solutions.</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <!-- <h4>2009-2011</h4> -->
+                                <h4 class="subheading">Proprietary Generative AI Technology:</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Powered by proprietary Generative AI technology from Project
+                                    Alphabet, we have developed India's first truly indigenous regional language Large
+                                    Language Models (LLM). These models are tailored to support learning in regional
+                                    languages, ensuring inclusivity and accessibility for all students.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <!-- <img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..."> -->
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <!-- <h4>March 2011</h4> -->
+                                <h4 class="subheading">Social Cause - 100% Literacy Rate:</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">As India celebrates its 75th Republic Day, GurukulGPT is committed
+                                    to a social cause: achieving a 100% literacy rate for Indians of all languages. We
+                                    believe education is the key to independence, and our platform aims to empower
+                                    learners from diverse linguistic backgrounds.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image">
+                            <!-- <img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..."> -->
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <!-- <h4>December 2015</h4> -->
+                                <h4 class="subheading">USP - Make in India, Free for Life:</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Our platform is proudly Made in India and offers a unique
+                                    proposition - it's 100% free for life. We're committed to democratizing education
+                                    and making quality learning accessible to every child in the country.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <!-- <img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..."> -->
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <!-- <h4>July 2020</h4> -->
+                                <h4 class="subheading">Our Vision:</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Driven by our vision of inclusive and accessible education,
+                                    GurukulGPT strives to be a catalyst for change in the Indian education landscape.
+                                    Through technology and innovation, we aim to create a brighter future for the next
+                                    generation of learners.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                Be Part
+                                <br>
+                                Of Our
+                                <br>
+                                Story!
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+                <center style="margin-top: 50px;">
+                    <p>Join us in our mission to transform education and empower every Indian student to reach their
+                        full potential. Together, let's build a nation where knowledge knows no boundaries.</p>
+                </center>
+            </div>
+        </section>
+        <footer style="padding: 20px;">
+            <center><span class="nav__copy">All rights reserved 2024</span></center>
+        </footer>
+    </article>
+    <script>
+
+    </script>
+</body>
+
+</html>
