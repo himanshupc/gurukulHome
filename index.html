@@ -1,10 +1,10 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GurukulGPT</title>
+    <link rel="shortcut icon" href="./images/Logo Opt 1.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <style>
@@ -108,6 +108,78 @@
             text-decoration: none;
         }
 
+        .button {
+            position: relative;
+            border: 0;
+            transition: 0.5s;
+            z-index: 1;
+            min-width: 15rem;
+            padding: 1rem 2rem;
+            font-size: 0.875rem;
+            line-height: 1;
+            font-family: "Montserrat", "Open Sans", sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            background: #041a2f;
+            color: #fff;
+        }
+
+        .button:before,
+        .button:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+        }
+
+
+
+        .button.--underline:after {
+            box-sizing: inherit;
+            width: 0;
+            height: 100%;
+            border-bottom: 4px solid #6bba62;
+            bottom: 0;
+            transition: 0.5s;
+        }
+
+        .button.--underline.--left:after {
+            left: 0;
+        }
+
+        .button.--underline.--right:after {
+            right: 0;
+        }
+
+        .button.--underline:hover:after {
+            width: 100%;
+        }
+
+        .button.--underline.--center:after {
+            right: 50%;
+            left: 50%;
+        }
+
+        .button.--underline.--center:hover:after {
+            right: 0;
+            left: 0;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 #041a2f;
+            }
+
+            50% {
+                box-shadow: 0 0 10px #041a2f;
+            }
+
+            100% {
+                box-shadow: 0 0 0 #041a2f;
+            }
+        }
+
         /* -------------------- */
         /* -- Animations CSS -- */
         /* -------------------- */
@@ -166,7 +238,7 @@
         .typed-text {
             color: #fbf9f1;
             font-weight: 900;
-            font-size: 1.5rem;
+            font-size: 1rem;
             text-shadow: #fbf9f1 0px 0px 20px;
         }
 
@@ -180,6 +252,7 @@
             font-family: "Montserrat", sans-serif;
             color: #ffffff !important;
             text-decoration: none;
+            line-height: 2;
             animation: focus-in-contract 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
         }
 
@@ -665,6 +738,10 @@
             color: #FFC800 !important;
             border-bottom: 1px solid #fff;
         }
+
+        .landing_page {
+            text-decoration: none;
+        }
     </style>
     <!-- Meta Pixel Code -->
     <script>
@@ -707,7 +784,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="navbar-menu">
+                        <!-- <div class="navbar-menu">
                             <div class="navbar-end">
                                 <span class="navbar-item">
                                     <a class="button is-primary is-outlined" href="#">
@@ -717,7 +794,7 @@
                                     </a>
                                 </span>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </header>
             </div>
@@ -727,13 +804,16 @@
                         <p class=" pp2">Unleash Your Learning Potential <span class="responsiveWith">with AI</span>
                             <span class="typed-text "></span><span class="cursor">&nbsp;</span>
                         </p>
-                        <h1 class="title">
-                            <span class="fade fadeOne">COMING</span>
-                            <span class="fade fadeTwo">SOON</span>
-                        </h1>
-                        <p class="pp">The future of education is Coming Sooner than you expect, powered by AI and made
-                            in
-                            India.</p>
+                        <a href="https://t.me/gurukul_gpt_bot" class="landing_page">
+                            <h1 class="title">
+                                <span class="fade fadeOne">GURUKUL</span>
+                                <span class="fade fadeTwo">GPT</span>
+                            </h1>
+                            <button class="button --underline --center">Let's Start</button>
+                        </a>
+                        <p class="pp">A WhatsApp-based tutoring service for primary-class students, <br> developed with
+                            India's first truly indigenous regional language Large Language Models (LLM) - powered by AI
+                            and Made in India.</p>
                     </div>
                 </div>
                 <div class="hero-foot">
