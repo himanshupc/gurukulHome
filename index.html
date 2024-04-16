@@ -124,6 +124,7 @@
             text-transform: uppercase;
             background: #041a2f;
             color: #fff;
+            margin: 5px;
         }
 
         .button:before,
@@ -742,6 +743,17 @@
         .landing_page {
             text-decoration: none;
         }
+
+        .btnsGurukul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #teleBot {
+            min-width: 1rem;
+        }
     </style>
     <!-- Meta Pixel Code -->
     <script>
@@ -804,13 +816,20 @@
                         <p class=" pp2">Unleash Your Learning Potential <span class="responsiveWith">with AI</span>
                             <span class="typed-text "></span><span class="cursor">&nbsp;</span>
                         </p>
+                        <br>
                         <a href="https://t.me/gurukul_gpt_bot" class="landing_page">
                             <h1 class="title">
                                 <span class="fade fadeOne">GURUKUL</span>
                                 <span class="fade fadeTwo">GPT</span>
                             </h1>
-                            <button class="button --underline --center">Let's Start</button>
+                            <!-- <button href="https://t.me/gurukul_gpt_bot" class="button --underline --center" >Let's Start</button> -->
                         </a>
+                        <div class="btnsGurukul">
+                            <button class="button --underline --center" onclick="redirectToWhatsApp()">WhatsApp</button>
+                            <button class="button --underline --center" id="teleBot">Let's
+                                Start</button>
+                        </div>
+
                         <p class="pp">A chat-based tutoring service for primary-class students, <br> developed with
                             India's first truly indigenous regional language Large Language Models (LLM) - powered by AI
                             and Made in India.</p>
@@ -847,6 +866,19 @@
         </section>
     </div>
     <script>
+        function redirectToWhatsApp() {
+            var phoneNumber = '+919910806460'; // Replace this with the desired phone number
+            var whatsappUrl = 'https://wa.me/' + phoneNumber;
+            console.log("whatsappUrl : ", whatsappUrl);
+            window.location.href = whatsappUrl;
+        }
+
+        const teleBot = document.getElementById("teleBot");
+        console.log("teleBot : ", teleBot);
+        teleBot.addEventListener('click', () => {
+            console.log("teleBot");
+            window.location.href = "https://t.me/gurukul_gpt_bot";
+        })
         // Typing
         const typedTextSpan = document.querySelector(".typed-text");
         const cursorSpan = document.querySelector(".cursor");
