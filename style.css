@@ -299,3 +299,13 @@ p {
     display: block;
   }
    */
+.fa-whatsapp {
+  font-size: 4rem !important;
+  color: green;
+}
+
+.inner_element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

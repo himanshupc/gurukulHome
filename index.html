@@ -7,6 +7,9 @@
     <link rel="shortcut icon" href="./images/Icon_gurukulGPT.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha384-..." crossorigin="anonymous">
+
     <style>
         @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Roboto+Mono:300,400");
 
@@ -825,9 +828,19 @@
                             <!-- <button href="https://t.me/gurukul_gpt_bot" class="button --underline --center" >Let's Start</button> -->
                         </a>
                         <div class="btnsGurukul">
-                            <button class="button --underline --center" onclick="redirectToWhatsApp()">WhatsApp</button>
-                            <button class="button --underline --center" id="teleBot">Let's
-                                Start</button>
+                            <button class="button --underline --center" onclick="redirectToWhatsApp()">
+                                <span class="inner_element"
+                                    style="display: flex; justify-content: center; align-items: center; gap: 8px;">Let's
+                                    Start
+                                    <i class="fa-brands fa-whatsapp"
+                                        style="color: green; font-size: 1.3rem;"></i></span>
+                            </button>
+                            <button class="button --underline --center" id="teleBot">
+                                <span style="display: flex; justify-content: center; align-items: center; gap: 8px;">
+                                    Let's Start <i class="fa-brands fa-telegram"
+                                        style="color: skyblue; font-size: 1.3rem;"></i>
+                                </span>
+                            </button>
                         </div>
 
                         <p class="pp">A chat-based tutoring service for primary-class students, <br> developed with
