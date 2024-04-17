@@ -170,6 +170,37 @@
             left: 0;
         }
 
+        .button.--underlineTelegram:after {
+            box-sizing: inherit;
+            width: 0;
+            height: 100%;
+            border-bottom: 4px solid #0088cc;
+            bottom: 0;
+            transition: 0.5s;
+        }
+
+        .button.--underlineTelegram.--left:after {
+            left: 0;
+        }
+
+        .button.--underlineTelegram.--right:after {
+            right: 0;
+        }
+
+        .button.--underlineTelegram:hover:after {
+            width: 100%;
+        }
+
+        .button.--underlineTelegram.--center:after {
+            right: 50%;
+            left: 50%;
+        }
+
+        .button.--underlineTelegram.--center:hover:after {
+            right: 0;
+            left: 0;
+        }
+
         @keyframes pulse {
             0% {
                 box-shadow: 0 0 0 #041a2f;
@@ -835,10 +866,10 @@
                                     <i class="fa-brands fa-whatsapp"
                                         style="color: green; font-size: 1.3rem;"></i></span>
                             </button>
-                            <button class="button --underline --center" id="teleBot">
+                            <button class="button --underlineTelegram --center" id="teleBot">
                                 <span style="display: flex; justify-content: center; align-items: center; gap: 8px;">
-                                    Let's Start <i class="fa-brands fa-telegram"
-                                        style="color: skyblue; font-size: 1.3rem;"></i>
+                                    Let's Start <i class="fa-brands fa-telegram" style="color: #0088cc
+                                        ; font-size: 1.3rem;"></i>
                                 </span>
                             </button>
                         </div>
