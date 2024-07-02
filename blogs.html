@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GurukulGPT - Blogs</title>
+    <link rel="shortcut icon" href="./images/Icon_gurukulGPT.png" type="image/x-icon">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400&display=swap");
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        *::selection {
+            color: #000;
+            background-color: #fff;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            font-weight: 300;
+            color: #fff;
+            background-image: url("https://d3mnsrrbhmb0a9.cloudfront.net/ai_art.png");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            max-width: 120rem;
+            margin: 0 auto;
+            padding: 0 6rem 6rem 6rem;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8rem 0 6rem 0;
+        }
+
+        .nav__list {
+            display: flex;
+            gap: 16rem;
+            list-style: none;
+        }
+
+        .nav__link {
+            text-decoration: none;
+            color: #fafafa;
+            font-weight: 500;
+            font-size: 1.8rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav__link--active {
+            color: #FFC800;
+        }
+
+        .nav__link:hover {
+            color: #949494;
+        }
+
+        .page-title {
+            margin-bottom: 8rem;
+            text-align: center;
+            font-family: "Anton", sans-serif;
+            font-size: 16rem;
+            text-transform: uppercase;
+            color: #fafafa;
+        }
+
+        .blog-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: #0000008a; /* Semi-transparent background */
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .blog-post {
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-info {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .blog-title {
+            font-size: 18px;
+        }
+
+        .blog-date {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="index.html">HOME</a></li>
+                    <li><a class="nav__link nav__link--active" href="About_us.html">ABOUT US</a></li>
+                    <li><a class="nav__link" href="contactus.html">CONTACT US</a></li>
+                    <li><a class="nav__link" href="blogs.html">BLOGS</a></li>
+                </ul>
+            </nav>
+            <h1 class="page-title">BLOGS</h1>
+        </header>
+        <main>
+            <div class="blog-container">
+                <a class="blog-link" href="https://medium.com/@gurukulgpt/f501c1087aba" target="_blank">
+                    <div class="blog-post">
+                        <img src="https://images.unsplash.com/photo-1549388604-817d15aa0110" alt="Blog Image">
+                        <div class="blog-info">
+                            <h2 class="blog-title">GurukulGPT: Feynman Series — Understanding Transformers (Part-1)</h2>
+                            <p class="blog-date">July, 2, 2024</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="blog-link" href="https://medium.com/@gurukulgpt/a8a6cc997ba0" target="_blank">
+                    <div class="blog-post">
+                        <img src="https://images.unsplash.com/photo-1673297180075-411992cad941" alt="Blog Image">
+                        <div class="blog-info">
+                            <h2 class="blog-title">Introducing GurukulGPT: Revolutionizing Self-Learning with Advanced Features</h2>
+                            <p class="blog-date">July, 2, 2024</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="blog-link" href="https://medium.com/@gurukulgpt/how-does-gpt-work-a-laymans-guide-to-understanding-ai-tutors-like-gurukulgpt-0bc5e4db98ae" target="_blank">
+                    <div class="blog-post">
+                        <img src="https://images.unsplash.com/photo-1706694442016-bd539e1d102b" alt="Blog Image">
+                        <div class="blog-info">
+                            <h2 class="blog-title">How Does GPT Work? A Layman's Guide to Understanding AI Tutors Like GurukulGPT</h2>
+                            <p class="blog-date">July, 2, 2024</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
