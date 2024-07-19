@@ -1,0 +1,496 @@
+﻿.background-image-icon {
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.background-image-icon,
+.background-image-parent,
+.bg-image-effect {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.bg-image-effect {
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.background-image-parent {
+  margin: 0 !important;
+}
+.home {
+  text-decoration: none;
+  align-self: stretch;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: inherit;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.selected-section-icon {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  object-fit: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scale(1.4);
+}
+.wrapper-selected-section {
+  height: 14px;
+  width: 30px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.powered-by,
+.wrapper-selected-section-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.wrapper-selected-section-wrapper {
+  height: 14px;
+  flex-direction: row;
+  padding: 0 var(--padding-3xs);
+  box-sizing: border-box;
+}
+.powered-by {
+  width: 50px;
+  flex-direction: column;
+  gap: var(--gap-xs);
+  color: #fec949;
+}
+.about-us,
+.blog,
+.contact-us {
+  text-decoration: none;
+  width: 82px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: inherit;
+  display: inline-block;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.blog,
+.contact-us {
+  width: 101px;
+}
+.blog {
+  width: 45px;
+}
+.navigation-box {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 3;
+}
+.header {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--padding-27xl) var(--padding-xl) var(--padding-3xs);
+  position: sticky;
+  gap: 36px;
+  top: 0;
+  z-index: 99;
+  text-align: left;
+  font-size: var(--font-size-mini);
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+}
+.gurukulgpt-logo {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.logo-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 0 var(--padding-2xl);
+}
+.gurukulgpt-logo1 {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: inherit;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.logo-wrapper-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.whatsapp-button {
+  height: 56px;
+  width: 220px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  border-radius: var(--br-9xl);
+  background: linear-gradient(95.8deg, #fbc947, #e81a64 50%, #2a397a);
+  border: 2px solid var(--color-white);
+  box-sizing: border-box;
+  display: none;
+}
+.lets-start-with {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  font-family: var(--font-montserrat);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 109px;
+  z-index: 1;
+}
+.chat-platform-labels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2px 0 0;
+}
+.logoswhatsapp-icon {
+  height: 22px;
+  width: 22px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 22px;
+  z-index: 1;
+}
+.lets-start-whatsaap-button,
+.telegram-button {
+  border-radius: var(--br-9xl);
+  border: 2px solid var(--color-white);
+}
+.lets-start-whatsaap-button {
+  cursor: pointer;
+  padding: var(--padding-sm) 37px var(--padding-sm) 40px;
+  background-color: transparent;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(95.8deg, #fbc947, #e81a64 50%, #2a397a);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  z-index: 2;
+}
+.telegram-button {
+  height: 56px;
+  width: 220px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  background-color: var(--color-gray-100);
+  box-sizing: border-box;
+  display: none;
+}
+.lets-talk-on {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  font-family: var(--font-montserrat);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 89px;
+  z-index: 1;
+}
+.lets-talk-on-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) 0 0;
+}
+.telegram-icon {
+  height: 28px;
+  width: 28px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.instant-messaging,
+.lets-talk-telegram-button {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.lets-talk-telegram-button {
+  cursor: pointer;
+  border: 2px solid var(--color-white);
+  padding: var(--padding-2xs) 45px var(--padding-2xs) 48px;
+  background-color: var(--color-gray-100);
+  backdrop-filter: blur(10px);
+  border-radius: var(--br-9xl);
+  flex-direction: row;
+  gap: var(--gap-7xs);
+  z-index: 2;
+}
+.instant-messaging {
+  flex-direction: column;
+  gap: var(--gap-3xs);
+}
+.youtube-icon {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 2;
+  object-fit: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scale(1.833);
+}
+.wrapper-youtube-icon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  flex-shrink: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.how-to-use {
+  align-self: stretch;
+  position: relative;
+  text-decoration: underline;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.how-to-use-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 3px 0 0;
+}
+.youtube-link,
+.youtube-link-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.youtube-link {
+  flex: 1;
+  justify-content: flex-start;
+  gap: var(--gap-7xs);
+}
+.youtube-link-wrapper {
+  height: 24px;
+  justify-content: flex-end;
+  padding: 0 50px 0 51px;
+  box-sizing: border-box;
+}
+.contact-wrapper {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 24px;
+}
+.contact-wrapper-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 185px;
+  font-size: var(--font-size-sm);
+}
+.facebook-logo-icon,
+.instagram-logo-icon,
+.xtwitter-logo-icon {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  min-height: 50px;
+  z-index: 2;
+}
+.social-icons,
+.social-icons-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.social-icons {
+  gap: var(--gap-xs);
+}
+.social-icons-wrapper {
+  padding: 0 47px 0 var(--padding-27xl);
+}
+.projectalphabetai1 {
+  text-decoration: underline;
+}
+.projectalphabetai {
+  color: inherit;
+}
+.powered-by-projectalphabetai-container {
+  position: relative;
+  font-weight: 600;
+  z-index: 2;
+}
+.project-alphabetai-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) var(--padding-8xs) 0 0;
+}
+.divider-element {
+  width: 4px;
+  height: 4px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  z-index: 2;
+}
+.divider-element-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs) 0 0;
+}
+.makeinindia-logo-icon {
+  height: 25px;
+  width: 46px;
+  position: relative;
+  object-fit: cover;
+  z-index: 2;
+}
+.footer,
+.social-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.footer {
+  flex-direction: row;
+  gap: var(--gap-3xs);
+}
+.social-wrapper {
+  flex-direction: column;
+  gap: 20px;
+}
+.social-wrapper-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 0 var(--padding-2xl);
+  font-size: 12px;
+}
+.content-wrapper1 {
+  width: 752px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 51px;
+  max-width: 100%;
+}
+.content-wrapper,
+.gurukulgpt-final-version {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.content-wrapper {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+  max-width: 100%;
+}
+.gurukulgpt-final-version {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-xs);
+  gap: 242px;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: 56px;
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+}
+@media screen and (max-width: 750px) {
+  .gurukulgpt-logo {
+    font-size: 45px;
+  }
+  .content-wrapper1 {
+    gap: 25px;
+  }
+  .gurukulgpt-final-version {
+    gap: 121px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .header {
+    gap: 18px;
+  }
+  .gurukulgpt-logo {
+    font-size: 34px;
+  }
+  .gurukulgpt-logo1 {
+    font-size: 22px;
+  }
+  .contact-wrapper-wrapper {
+    padding-bottom: 120px;
+    box-sizing: border-box;
+  }
+  .social-icons-wrapper {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .gurukulgpt-final-version {
+    gap: 60px;
+  }
+}
