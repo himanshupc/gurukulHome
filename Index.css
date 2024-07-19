@@ -99,7 +99,6 @@
   bottom: 0;
   left: 0;
   background-color: transparent;
-  z-index: 3;
 }
 .header {
   align-self: stretch;

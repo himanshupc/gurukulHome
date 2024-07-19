@@ -1,812 +1,32 @@
-    <html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
     <meta name="description" content="Your Child's Personal AI Tutor for Balanced Learning,
     developed with India's first truly indigenous regional language Large Language Models (LLM) - powered by AI and Made in India." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="School Tutor, School education, school, Free education, Distance education, Artificial intelligence, Generative AI" />
-
+    
     <title>GurukulGPT</title>
     <link rel="shortcut icon" href="./images/Icon_gurukulGPT.png" type="image/x-icon">
 
+     <!-- Google tag (gtag.js) -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-10VFSD6VTC"></script>
+     <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+ 
+     gtag('config', 'G-10VFSD6VTC');
+     </script>
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" />
+
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-10VFSD6VTC"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-10VFSD6VTC');
-    </script>
-
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha384-..." crossorigin="anonymous">
-
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Roboto+Mono:300,400");
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            background: linear-gradient(rgba(203, 208, 223, 0.45), rgba(46, 55, 86, 0.45)),
-                url("https://d3mnsrrbhmb0a9.cloudfront.net/ai_art.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 100%;
-        }
-
-        body {
-            margin: 0%;
-            padding: 0%;
-        }
-
-        .background {
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .hero-head header {
-            height: 75px;
-        }
-
-        .hero-head header .navbar-item img {
-            height: 75px;
-            max-height: none;
-        }
-
-        .hero-head header .navbar-item .is-primary {
-            border-color: white !important;
-            color: white !important;
-        }
-
-        .hero-head header .navbar-item .is-primary:hover {
-            background: rgba(0, 0, 0, 0) !important;
-            border-color: white !important;
-            color: white !important;
-            transition: all 0.2s ease-in-out;
-        }
-
-        .hero-body .title {
-            font-family: "Montserrat", sans-serif;
-            font-weight: 300 !important;
-            font-size: 4rem !important;
-            letter-spacing: 15px;
-            color: #ffffff !important;
-        }
-
-        .hero-body .subtitle .countdown {
-            color: #ffffff;
-            font-family: "Roboto Mono", sans-serif;
-            font-weight: 300;
-            text-transform: uppercase;
-            padding-top: 15px;
-            letter-spacing: 2px;
-            font-size: 2.5rem;
-        }
-
-        .hero-foot {
-            font-family: "Montserrat", sans-serif;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .hero-foot ul li {
-            display: inline;
-            padding: 25px;
-        }
-
-        .hero-foot a {
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.7rem;
-        }
-
-        .footerContainer {
-            border: 1.5px solid gray;
-            border-radius: 10px;
-            width: 50%;
-            margin-top: 50px;
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 1s;
-            background-color: #88898a5e;
-        }
-
-        .container2 ul li a {
-            list-style: none;
-            text-decoration: none;
-        }
-
-        .button {
-            position: relative;
-            border: 0;
-            transition: 0.5s;
-            z-index: 1;
-            min-width: 15rem;
-            padding: 1rem 2rem;
-            font-size: 0.875rem;
-            line-height: 1;
-            font-family: "Montserrat", "Open Sans", sans-serif;
-            font-weight: 500;
-            cursor: pointer;
-            text-decoration: none;
-            text-transform: uppercase;
-            background: #041a2f;
-            color: #fff;
-            margin: 5px;
-        }
-
-        .button:before,
-        .button:after {
-            content: "";
-            position: absolute;
-            z-index: -1;
-        }
-
-
-
-        .button.--underline:after {
-            box-sizing: inherit;
-            width: 0;
-            height: 100%;
-            border-bottom: 4px solid #6bba62;
-            bottom: 0;
-            transition: 0.5s;
-        }
-
-        .button.--underline.--left:after {
-            left: 0;
-        }
-
-        .button.--underline.--right:after {
-            right: 0;
-        }
-
-        .button.--underline:hover:after {
-            width: 100%;
-        }
-
-        .button.--underline.--center:after {
-            right: 50%;
-            left: 50%;
-        }
-
-        .button.--underline.--center:hover:after {
-            right: 0;
-            left: 0;
-        }
-
-        .button.--underlineTelegram:after {
-            box-sizing: inherit;
-            width: 0;
-            height: 100%;
-            border-bottom: 4px solid #0088cc;
-            bottom: 0;
-            transition: 0.5s;
-        }
-
-        .button.--underlineTelegram.--left:after {
-            left: 0;
-        }
-
-        .button.--underlineTelegram.--right:after {
-            right: 0;
-        }
-
-        .button.--underlineTelegram:hover:after {
-            width: 100%;
-        }
-
-        .button.--underlineTelegram.--center:after {
-            right: 50%;
-            left: 50%;
-        }
-
-        .button.--underlineTelegram.--center:hover:after {
-            right: 0;
-            left: 0;
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 #041a2f;
-            }
-
-            50% {
-                box-shadow: 0 0 10px #041a2f;
-            }
-
-            100% {
-                box-shadow: 0 0 0 #041a2f;
-            }
-        }
-
-        /* -------------------- */
-        /* -- Animations CSS -- */
-        /* -------------------- */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                opacity: 1\9;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .fade {
-            opacity: 0;
-            animation: fadeIn ease-in 1;
-            animation-fill-mode: forwards;
-            animation-duration: 2s;
-        }
-
-        .fade.fadeOne {
-            animation-delay: 1s;
-        }
-
-        .fade.fadeTwo {
-            animation-delay: 1.4s;
-        }
-
-        .fade.fadeThree {
-            animation-delay: 4.2s;
-        }
-
-        .fade.fadeThree span {
-            font-size: 0.8rem;
-        }
-
-        .Company_Nav {
-            font-family: "Montserrat", sans-serif;
-            font-weight: 600 !important;
-            font-size: 2.5rem !important;
-            letter-spacing: 15px;
-            color: #ffffff !important;
-
-            padding: 0% 1%;
-        }
-
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            top: -160px;
-        }
-
-        .typed-text {
-            color: #fbf9f1;
-            font-weight: 900;
-            font-size: 1rem;
-            text-shadow: #fbf9f1 0px 0px 20px;
-        }
-
-        .top_title {
-            font-family: "Montserrat", sans-serif;
-            text-decoration: none;
-        }
-
-        /* Cards  */
-        .pp {
-            font-family: "Montserrat", sans-serif;
-            color: #ffffff !important;
-            text-decoration: none;
-            line-height: 2;
-            animation: focus-in-contract 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-        }
-
-        @-webkit-keyframes focus-in-contract {
-            0% {
-                letter-spacing: 1em;
-                -webkit-filter: blur(12px);
-                filter: blur(12px);
-                opacity: 0;
-            }
-
-            100% {
-                -webkit-filter: blur(0px);
-                filter: blur(0px);
-                opacity: 1;
-            }
-        }
-
-        @keyframes focus-in-contract {
-            0% {
-                letter-spacing: 1em;
-                -webkit-filter: blur(12px);
-                filter: blur(12px);
-                opacity: 0;
-            }
-
-            100% {
-                -webkit-filter: blur(0px);
-                filter: blur(0px);
-                opacity: 1;
-            }
-        }
-
-        .pp2 {
-            font-family: "Montserrat", sans-serif;
-            color: #ffffff !important;
-            text-decoration: none;
-            animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-        }
-
-        @-webkit-keyframes text-focus-in {
-            0% {
-                -webkit-filter: blur(12px);
-                filter: blur(12px);
-                opacity: 0;
-            }
-
-            100% {
-                -webkit-filter: blur(0px);
-                filter: blur(0px);
-                opacity: 1;
-            }
-        }
-
-        @keyframes text-focus-in {
-            0% {
-                -webkit-filter: blur(12px);
-                filter: blur(12px);
-                opacity: 0;
-            }
-
-            100% {
-                -webkit-filter: blur(0px);
-                filter: blur(0px);
-                opacity: 1;
-            }
-        }
-
-        @-webkit-keyframes tracking-in-contract-bck-bottom {
-            0% {
-                letter-spacing: 1em;
-                -webkit-transform: translateZ(400px) translateY(300px);
-                transform: translateZ(400px) translateY(300px);
-                opacity: 0;
-            }
-
-            40% {
-                opacity: 0.6;
-            }
-
-            100% {
-                -webkit-transform: translateZ(0) translateY(0);
-                transform: translateZ(0) translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes tracking-in-contract-bck-bottom {
-            0% {
-                letter-spacing: 1em;
-                -webkit-transform: translateZ(400px) translateY(300px);
-                transform: translateZ(400px) translateY(300px);
-                opacity: 0;
-            }
-
-            40% {
-                opacity: 0.6;
-            }
-
-            100% {
-                -webkit-transform: translateZ(0) translateY(0);
-                transform: translateZ(0) translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Cards  */
-
-        .cards {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            position: absolute;
-            top: 20%;
-            width: 80%;
-            margin: auto;
-        }
-
-        .container {
-            padding: 70px 0;
-        }
-
-        .card {
-            position: relative;
-
-            height: 170px;
-
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            border-radius: 25px;
-            margin: 10px;
-            transition: 0.25s ease-in;
-        }
-
-        .card .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-            height: 170px;
-            background: linear-gradient(120.55deg,
-                    rgba(39, 39, 39, 0.38) 0%,
-                    rgba(39, 39, 39, 0.2394) 100%);
-            border-radius: 25px;
-        }
-
-        .card .content {
-            position: absolute;
-            bottom: 10px;
-            left: 25px;
-        }
-
-        .card .content h4 {
-            font-family: Ubuntu;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            color: #f2f2f2;
-            margin-bottom: 10px;
-            margin-top: 0;
-        }
-
-        .card .content h6 {
-            font-family: Ubuntu;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            color: #f2f2f2;
-            margin-bottom: 10px;
-            margin-top: 0;
-        }
-
-        .card .fav {
-            position: absolute;
-            top: 25px;
-            right: 25px;
-            cursor: pointer;
-        }
-
-        .card .fav i {
-            color: white;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .card:hover {
-            background-position: top;
-        }
-
-        .container2 ul {
-            margin: 0%;
-            padding: 0%;
-            display: flex;
-        }
-
-        @media only screen and (min-width: 500px) and (max-width: 899px) {
-            .container2 ul {
-                margin: 0%;
-                padding: 0%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .background {
-                padding: 2%;
-            }
-
-            .hero-foot ul li {
-                display: inline;
-                padding: 0px;
-            }
-        }
-
-        @media only screen and (min-width: 900px) and (max-width: 1099px) {
-            .container2 ul {
-                margin: 0%;
-                padding: 0%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .background {
-                padding: 2%;
-            }
-
-            .hero-foot ul li {
-                display: inline;
-                padding: 0px;
-            }
-        }
-
-        @media only screen and (min-width: 0px) and (max-width: 499px) {
-            .navbarGurukull ul {
-                margin-right: 20px !important;
-            }
-
-            .navbarGurukull ul li {
-                padding: 10px !important;
-            }
-
-            .navbar-brand {
-                display: flex;
-                flex-direction: column-reverse;
-                align-items: center;
-                justify-content: space-between;
-                position: relative;
-                top: -90px !important;
-            }
-
-            .container2 ul {
-                margin: 0%;
-                padding: 0%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .background {
-                padding: 2%;
-            }
-
-            .hero-foot ul li {
-                display: inline;
-                padding: 4px;
-            }
-
-            .Company_Nav {
-                font-family: "Montserrat", sans-serif;
-                font-weight: 600 !important;
-                font-size: 2rem !important;
-                letter-spacing: 15px;
-                color: #ffffff !important;
-                text-align: center;
-                position: relative;
-                top: -24px;
-            }
-
-            .hero-body .title {
-                font-family: "Montserrat", sans-serif;
-                font-weight: 300 !important;
-                font-size: 3.5rem !important;
-                letter-spacing: 15px;
-                color: #ffffff !important;
-            }
-
-            .typed-text {
-                font-size: 1.2rem;
-            }
-
-            .container {
-                padding: 0%;
-                margin-top: 40px;
-            }
-
-            .footerContainer {
-                padding: 20% 0%;
-                border: 1.5px solid gray;
-                border-radius: 10px;
-                width: 90%;
-                margin-top: 50px;
-                height: 100px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                transition: all 1s;
-                background-color: #88898a5e;
-                animation: slide-in-fwd-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-            }
-
-            @-webkit-keyframes slide-in-fwd-center {
-                0% {
-                    -webkit-transform: translateZ(-1400px);
-                    transform: translateZ(-1400px);
-                    opacity: 0;
-                }
-
-                100% {
-                    -webkit-transform: translateZ(0);
-                    transform: translateZ(0);
-                    opacity: 1;
-                }
-            }
-
-            @keyframes slide-in-fwd-center {
-                0% {
-                    -webkit-transform: translateZ(-1400px);
-                    transform: translateZ(-1400px);
-                    opacity: 0;
-                }
-
-                100% {
-                    -webkit-transform: translateZ(0);
-                    transform: translateZ(0);
-                    opacity: 1;
-                }
-            }
-
-            .pp2 {
-                font-family: "Montserrat", sans-serif;
-                color: #ffffff !important;
-                font-size: 1.3rem;
-                text-decoration: none;
-                animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-            }
-
-            .pp {
-                font-size: 1.1rem;
-                font-family: "Montserrat", sans-serif;
-                color: #ffffff !important;
-                text-decoration: none;
-                animation: slide-in-fwd-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-            }
-
-            @-webkit-keyframes slide-in-fwd-bottom {
-                0% {
-                    -webkit-transform: translateZ(-1400px) translateY(800px);
-                    transform: translateZ(-1400px) translateY(800px);
-                    opacity: 0;
-                }
-
-                100% {
-                    -webkit-transform: translateZ(0) translateY(0);
-                    transform: translateZ(0) translateY(0);
-                    opacity: 1;
-                }
-            }
-
-            @keyframes slide-in-fwd-bottom {
-                0% {
-                    -webkit-transform: translateZ(-1400px) translateY(800px);
-                    transform: translateZ(-1400px) translateY(800px);
-                    opacity: 0;
-                }
-
-                100% {
-                    -webkit-transform: translateZ(0) translateY(0);
-                    transform: translateZ(0) translateY(0);
-                    opacity: 1;
-                }
-            }
-
-        }
-
-        @media only screen and (min-width: 200px) and (max-width: 300px) {
-            .Company_Nav {
-                font-family: "Montserrat", sans-serif;
-                font-weight: 600 !important;
-                font-size: 1.2rem !important;
-                letter-spacing: 15px;
-                color: #ffffff !important;
-                position: relative;
-                left: 6px;
-                top: -65px;
-            }
-
-            .hero-body .title {
-                font-family: "Montserrat", sans-serif;
-                font-weight: 300 !important;
-                font-size: 2rem !important;
-                letter-spacing: 15px;
-                color: #ffffff !important;
-            }
-
-            .pp2 {
-                font-family: "Montserrat", sans-serif;
-                color: #ffffff !important;
-                font-size: 1rem;
-                text-decoration: none;
-                animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-            }
-
-            .typed-text {
-                font-size: 0.9rem;
-            }
-
-            .pp {
-                font-size: 0.9rem;
-            }
-
-            .hero-foot {
-                font-family: "Montserrat", sans-serif;
-                font-weight: 500;
-                margin-bottom: 20px;
-            }
-
-            .hero-foot a {
-                color: white;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                font-size: 0.5rem;
-            }
-
-            .footerContainer {
-                width: 100%;
-            }
-
-            .navbar-brand {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                position: relative;
-                top: -50px !important;
-            }
-        }
-
-        .navbarGurukull ul {
-            margin-right: 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            list-style: none;
-        }
-
-        .navbarGurukull ul li {
-            padding: 30px;
-
-        }
-
-        .navbarGurukull ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-family: "Montserrat", sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-            transition: all 0.3s;
-            transition: all ease-in-out .2s;
-        }
-
-        .navbarGurukull ul li a:hover {
-            color: #FFC800;
-            border-bottom: 1px solid #fff;
-        }
-
-        .nav__link--active {
-            color: #FFC800 !important;
-            border-bottom: 1px solid #fff;
-        }
-
-        .landing_page {
-            text-decoration: none;
-        }
-
-        .btnsGurukul {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #teleBot {
-            min-width: 1rem;
-        }
-    </style>
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -829,163 +49,125 @@
 </head>
 
 <body>
-    <div class="background">
-        <section class="hero is-transparent is-fullheight ">
-            <div class="hero-head">
-                <header class="navbar" style="margin-top: 100px ;">
-                    <div class="container">
-                        <div class="navbar-brand">
-                            <a class="navbar-item">
-                                <div class="logo">
-                                    <h1 class="Company_Nav">GurukulGPT</h1>
-                                </div>
-                                <div class="navbarGurukull">
-                                    <ul>
-                                        <li><a href="index.html" class="nav__link--active">HOME</a></li>
-                                        <li><a href="About_us.html">ABOUT US</a></li>
-                                        <li><a href="contactus.html">CONTACT US</a></li>
-                                        <li><a href="blogs.html">BLOGS</a></li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- <div class="navbar-menu">
-                            <div class="navbar-end">
-                                <span class="navbar-item">
-                                    <a class="button is-primary is-outlined" href="#">
-                                        <span class="icon">
-                                            <i class="fa fa-twitter"></i>
-                                        </span>
-                                    </a>
-                                </span>
-                            </div>
-                        </div> -->
+    <div class="gurukulgpt-final-version">
+        <div class="background-image-parent">
+            <img class="background-image-icon" alt="" src="images/Background Image 4x.png" />
+
+            <section class="bg-image-effect"></section>
+        </div>
+        <header class="header">
+            <div class="powered-by">
+                <a class="home" href="index.html">Home</a>
+                <div class="wrapper-selected-section-wrapper">
+                    <div class="wrapper-selected-section">
+                        <img class="selected-section-icon" loading="lazy" alt="" src="images/Selected Section.svg" />
                     </div>
-                </header>
+                </div>
             </div>
-            <center>
-                <div class="hero-body">
-                    <div class="container has-text-centered content">
-                        <p class=" pp2">Unleash Your Learning Potential <span class="responsiveWith">with AI</span>
-                            <span class="typed-text "></span><span class="cursor">&nbsp;</span>
-                        </p>
-                        <br>
-                        <a href="https://t.me/gurukul_gpt_bot" class="landing_page">
-                            <h1 class="title">
-                                <span class="fade fadeOne">GURUKUL</span>
-                                <span class="fade fadeTwo">GPT</span>
-                            </h1>
-                            <!-- <button href="https://t.me/gurukul_gpt_bot" class="button --underline --center" >Let's Start</button> -->
-                        </a>
-                        <div class="btnsGurukul">
-                            <button class="button --underline --center" onclick="redirectToWhatsApp()">
-                                <span class="inner_element"
-                                    style="display: flex; justify-content: center; align-items: center; gap: 8px;">Let's
-                                    Start
-                                    <i class="fa-brands fa-whatsapp"
-                                        style="color: green; font-size: 1.3rem;"></i></span>
-                            </button>
-                            <button class="button --underlineTelegram --center" id="teleBot">
-                                <span style="display: flex; justify-content: center; align-items: center; gap: 8px;">
-                                    Let's Start <i class="fa-brands fa-telegram" style="color: #0088cc
-                                        ; font-size: 1.3rem;"></i>
-                                </span>
-                            </button>
-                        </div>
-
-                        <p class="pp">Your Child's Personal AI Tutor for Balanced Learning, <br> developed with
-                            India's first truly indigenous regional language Large Language Models (LLM) - powered by AI
-                            and Made in India.</p>
+            <a class="about-us" href="About_us.html">About Us</a>
+            <a class="contact-us" href="contactus.html">Contact Us</a>
+            <a class="blog" href="blogs.html">Blog</a>
+            <div class="navigation-box"></div>
+        </header>
+        <div class="content-wrapper">
+            <div class="content-wrapper1">
+                <div class="logo-wrapper-parent">
+                    <div class="logo-wrapper">
+                        <h1 class="gurukulgpt-logo">GurukulGPT</h1>
                     </div>
+                    <h2 class="gurukulgpt-logo1">
+                        Your Child's Personal AI Tutor for Balanced Learning
+                    </h2>
                 </div>
-                <div class="hero-foot">
-                    <div class="columns has-text-centered">
-                        <div class="column">
-                            <div class="footerContainer">
-                                <div class="container2">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><span class="feature-icon"
-                                                    style="font-size: 18px;">🚀</span>Learn
-                                                Smarter, not Harder</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="feature-icon"
-                                                    style="font-size: 18px;">🎯</span>Personalized Learning Paths</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="feature-icon"
-                                                    style="font-size: 18px;">🌌</span>Engage
-                                                & Explore with Fun</a>
-                                        </li>
-                                    </ul>
+                <div class="contact-wrapper-wrapper">
+                    <div class="contact-wrapper">
+                        <div class="instant-messaging">
+                            <button class="lets-start-whatsaap-button" onclick="redirectToWhatsApp()">
+                                <div class="whatsapp-button"></div>
+                                <div class="chat-platform-labels">
+                                    <div class="lets-start-with">Lets Start With</div>
                                 </div>
-                            </div>
+                                <img class="logoswhatsapp-icon" alt="" src="images/logos_whatsapp-icon.svg" />
+                            </button>
+                            <button class="lets-talk-telegram-button" id="teleBot">
+                                <div class="telegram-button"></div>
+                                <div class="lets-talk-on-wrapper">
+                                    <div class="lets-talk-on">Lets Talk On</div>
+                                </div>
+                                <img class="telegram-icon" alt="" src="images/telegram Icon.svg" />
+                            </button>
                         </div>
+
+                        <a href="https://youtu.be/erzQfIN_HwY?si=wt61D7PBCnEMlB0a">
+                            <div class="youtube-link-wrapper">
+
+                                <div class="youtube-link">
+                                    <div class="wrapper-youtube-icon">
+                                        <img class="youtube-icon" loading="lazy" alt="" src="images/Youtube Icon.svg" />
+                                    </div>
+                                    <div class="how-to-use">How to use?</div>
+
+                                </div>
+                        </a>
                     </div>
                 </div>
-            </center>
-
-        </section>
+            </div>
+        </div>
     </div>
+    <div class="social-wrapper-wrapper">
+        <div class="social-wrapper">
+            <div class="social-icons-wrapper">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/GurukulGPT">
+                        <img class="facebook-logo-icon" loading="lazy" alt="" src="images/Facebook Logo.svg" />
+                    </a>
+
+                    <a href="https://twitter.com/gurukulGPT">
+                        <img class="xtwitter-logo-icon" loading="lazy" alt="" src="images/X_Twitter Logo.svg" />
+                    </a>
+
+                    <a href="https://www.instagram.com/gurukulgptofficial">
+                        <img class="instagram-logo-icon" loading="lazy" alt="" src="images/Instagram Logo.svg" />
+                    </a>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="project-alphabetai-wrapper">
+                    <div class="powered-by-projectalphabetai-container">
+                        Powered by
+                        <a class="projectalphabetai" href="https://projectalphabet.ai/" target="_blank">
+                            <span class="projectalphabetai1">ProjectAlphabet.ai</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="divider-element-wrapper">
+                    <div class="divider-element"></div>
+                </div>
+                <img class="makeinindia-logo-icon" loading="lazy" alt="" src="images/Makeinindia logo.svg" />
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
     <script>
         function redirectToWhatsApp() {
             var phoneNumber = '+919910806460'; // Replace this with the desired phone number
             var whatsappUrl = 'https://wa.me/' + phoneNumber + '/?text=Hi';
-            console.log("whatsappUrl : ", whatsappUrl);
+            //console.log("whatsappUrl : ", whatsappUrl);
             window.location.href = whatsappUrl;
         }
 
         const teleBot = document.getElementById("teleBot");
-        console.log("teleBot : ", teleBot);
+        //console.log("teleBot : ", teleBot);
         teleBot.addEventListener('click', () => {
-            console.log("teleBot");
+            //console.log("teleBot");
             window.location.href = "https://t.me/gurukul_gpt_bot";
         })
-        // Typing
-        const typedTextSpan = document.querySelector(".typed-text");
-        const cursorSpan = document.querySelector(".cursor");
 
-        const textArray = [" Future", " fun", " a journey", " LIFE"];
-        const typingDelay = 200;
-        const erasingDelay = 100;
-        const newTextDelay = 2000; // Delay between current and next text
-        let textArrayIndex = 0;
-        let charIndex = 0;
 
-        function type() {
-            if (charIndex < textArray[textArrayIndex].length) {
-                if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-                charIndex++;
-                setTimeout(type, typingDelay);
-            }
-            else {
-                cursorSpan.classList.remove("typing");
-                setTimeout(erase, newTextDelay);
-            }
-        }
-
-        function erase() {
-            if (charIndex > 0) {
-                if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
-                charIndex--;
-                setTimeout(erase, erasingDelay);
-            }
-            else {
-                cursorSpan.classList.remove("typing");
-                textArrayIndex++;
-                if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-                setTimeout(type, typingDelay + 1100);
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
-            if (textArray.length) setTimeout(type, newTextDelay + 250);
-        });
     </script>
-
 </body>
 
 </html>
