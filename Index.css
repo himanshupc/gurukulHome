@@ -286,6 +286,7 @@
   justify-content: center;
 }
 .how-to-use {
+  color: white;
   align-self: stretch;
   position: relative;
   text-decoration: underline;
